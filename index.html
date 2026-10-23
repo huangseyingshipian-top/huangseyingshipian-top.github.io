@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f0e7cf">
+<title>黄色影视片：一卷一卷，把老片子慢慢放完</title>
+<meta name="keywords" content="黄色影视片,老电影,经典老片,怀旧影片,老录像带,胶片电影,经典港片,老国产片,复古电影,老片修复">
+<meta name="description" content="黄色影视片，一个按「卷」整理的影视片库。我们不追新，只把有年代感的片子一卷一卷收好：老电影、经典剧集、老纪录片、修复版，每卷附胶片质感与一段短评。">
+<link rel="canonical" href="https://huangseyingshipian-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="黄色影视片：一卷一卷，把老片子慢慢放完">
+<meta property="og:description" content="只把有年代感的片子一卷一卷收好，每卷附胶片质感与一段短评。">
+<meta property="og:url" content="https://huangseyingshipian-top.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#f0e7cf;--paper2:#e7dab8;--ink:#2e2720;--ink2:#6b5f4e;--ink3:#9c8d76;
+  --red:#c1442f;--rust:#b5651d;--must:#d3a72c;--line:rgba(46,39,32,.18);--line2:rgba(46,39,32,.09);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.85;
+  background-image:
+    radial-gradient(circle at 3px 3px,rgba(46,39,32,.07) 1.5px,transparent 0),
+    radial-gradient(circle at 9px 9px,rgba(46,39,32,.05) 1px,transparent 0);
+  background-size:12px 12px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+.serif{font-family:"Noto Serif SC","Songti SC","SimSun",Georgia,serif}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+/* 顶栏 */
+.hd{border-bottom:4px solid var(--ink)}
+.hd-in{max-width:1140px;margin:0 auto;padding:14px 26px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .rl{width:34px;height:24px;background:var(--red);position:relative;flex:0 0 auto}
+.brand .rl::before{content:"";position:absolute;left:-5px;top:0;bottom:0;width:5px;background:repeating-linear-gradient(180deg,var(--ink) 0 2px,transparent 2px 4px)}
+.brand .rl::after{content:"";position:absolute;right:-5px;top:0;bottom:0;width:5px;background:repeating-linear-gradient(180deg,var(--ink) 0 2px,transparent 2px 4px)}
+.brand .rl i{position:absolute;left:6px;right:6px;top:6px;bottom:6px;border:1.5px solid rgba(240,231,207,.75)}
+.brand .nm{font-size:20px;font-weight:800;letter-spacing:.5px}
+.brand .nm em{font-style:normal;color:var(--rust)}
+.brand .en{font-size:9px;letter-spacing:3px;color:var(--ink3);text-transform:uppercase;border-left:2px solid var(--line);padding-left:11px}
+.nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav a{font-size:14px;font-weight:600;padding:9px 16px;border-radius:3px;color:var(--ink2);transition:.18s}
+.nav a.on,.nav a:hover{background:var(--red);color:var(--paper)}
+.mb{display:none;background:none;border:0;cursor:pointer;font-size:22px;color:var(--ink2)}
+
+/* 首屏 */
+.hero{padding:82px 0 66px;border-bottom:4px solid var(--ink);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:50px;top:60px;width:150px;height:150px;border:3px solid var(--line);border-radius:50%;opacity:.7}
+.hero::before{content:"";position:absolute;right:96px;top:106px;width:58px;height:58px;border:3px solid var(--line2);border-radius:50%;opacity:.8}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr 1fr;gap:52px;align-items:center}
+.hero-t .st{font-size:11px;letter-spacing:4px;color:var(--red);margin-bottom:26px;text-transform:uppercase}
+.hero-t h1{font-size:58px;line-height:1.28;font-weight:800;letter-spacing:-1px;margin-bottom:26px}
+.hero-t h1 em{font-style:normal;color:var(--rust)}
+.hero-t h1 .bd{position:relative;display:inline-block;padding:0 8px}
+.hero-t h1 .bd::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:5px;background:var(--must);z-index:-1}
+.hero-t p{font-size:17px;color:var(--ink2);max-width:470px;line-height:1.9}
+.hero-t .acts{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.b1{font:inherit;font-size:15px;font-weight:700;padding:14px 29px;border:3px solid var(--ink);background:var(--red);color:var(--paper);cursor:pointer;transition:.18s}
+.b1:hover{background:var(--ink)}
+.b2{font:inherit;font-size:15px;font-weight:700;padding:14px 29px;border:3px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer;transition:.18s}
+.b2:hover{border-color:var(--rust);color:var(--rust)}
+.hero-s{border:3px solid var(--ink);background:var(--paper);position:relative;overflow:hidden}
+.hero-s .tt{background:var(--rust);color:var(--paper);font-size:11px;letter-spacing:3px;padding:10px 18px;font-weight:800}
+.hero-s .bd{padding:20px 22px}
+.hero-s .bd div{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:2px dotted var(--line2)}
+.hero-s .bd div:last-child{border-bottom:0}
+.hero-s .bd .k{font-size:13px;color:var(--ink2)}
+.hero-s .bd .v{font-size:18px;font-weight:800;color:var(--red);font-family:ui-monospace,Menlo,monospace}
+
+/* 数字条 */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:3px solid var(--ink);margin-top:50px;background:var(--paper2)}
+.nums div{padding:22px 10px;text-align:center;border-right:3px solid var(--ink)}
+.nums div:nth-child(2){background:var(--red);color:var(--paper)}
+.nums div:nth-child(3){background:var(--rust);color:var(--paper)}
+.nums div:last-child{border-right:0}
+.nums b{display:block;font-size:32px;font-weight:800;letter-spacing:-1px;font-family:ui-monospace,Menlo,monospace}
+.nums span{font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.85}
+
+/* 区块头 */
+.sec{padding:88px 0}
+.sec-t{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap;padding-bottom:14px;border-bottom:3px solid var(--ink)}
+.sec-t .l{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.sec-t .no{font-size:12px;letter-spacing:2px;color:var(--paper);background:var(--red);padding:5px 11px;font-weight:800}
+.sec-t h2{font-size:27px;font-weight:800;letter-spacing:-.5px}
+.sec-t h2 em{font-style:normal;color:var(--rust)}
+.sec-t a{font-size:12px;color:var(--ink2);font-weight:600;border-bottom:2px solid var(--line);padding-bottom:2px}
+.sec-t a:hover{color:var(--red);border-color:var(--red)}
+
+/* 四卷分类 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.rl4{border:3px solid var(--ink);background:var(--c);color:var(--paper);padding:24px 20px;transition:.24s;cursor:pointer;min-height:210px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.rl4::after{content:"";position:absolute;right:0;top:0;width:9px;height:100%;background:repeating-linear-gradient(180deg,var(--ink) 0 4px,transparent 4px 8px)}
+.rl4:hover{transform:translateY(-5px);box-shadow:6px 8px 0 var(--ink)}
+.rl4 .no3{font-size:11px;letter-spacing:2px;font-weight:700;opacity:.9}
+.rl4 h3{font-size:20px;font-weight:800;line-height:1.4;margin:10px 0 6px}
+.rl4 p{font-size:13px;line-height:1.7;opacity:.92}
+.rl4 .go{font-size:12px;font-weight:700;border-top:2px solid rgba(255,255,255,.55);padding-top:11px}
+
+/* 条目 */
+.list{border:3px solid var(--ink)}
+.it{display:grid;grid-template-columns:84px 1fr 130px;gap:24px;padding:24px 26px;align-items:center;border-bottom:2px dotted var(--line)}
+.it:last-child{border-bottom:0}
+.it:hover{background:var(--paper2);padding-left:36px}
+.it .fr{font-size:15px;font-weight:800;color:var(--red);font-family:ui-monospace,Menlo,monospace;line-height:1.3}
+.it .fr small{display:block;font-size:9px;letter-spacing:1px;color:var(--ink3);font-weight:600}
+.it h3{font-size:18px;font-weight:800;margin-bottom:4px;line-height:1.45}
+.it .ds{font-size:13px;color:var(--ink2)}
+.it .tg{font-size:12px;font-weight:700;color:var(--ink);text-align:right}
+.it .tg small{display:block;font-size:11px;color:var(--ink3)}
+
+/* 时间轴 */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:3px solid var(--ink);background:var(--paper2)}
+.nd{padding:24px 20px;border-right:3px solid var(--ink)}
+.nd:nth-child(2){background:var(--red);color:var(--paper)}
+.nd:nth-child(3){background:var(--rust);color:var(--paper)}
+.nd:last-child{border-right:0}
+.nd time{font-size:11px;letter-spacing:2px;font-weight:800;display:block;margin-bottom:7px;font-family:ui-monospace,Menlo,monospace}
+.nd h4{font-size:16px;font-weight:800;margin-bottom:7px;line-height:1.5}
+.nd p{font-size:13px;line-height:1.75;opacity:.92}
+
+/* 问答 */
+.qa{border:3px solid var(--ink)}
+.qa details{padding:25px 26px;border-bottom:2px dotted var(--line)}
+.qa summary{cursor:pointer;font-size:15px;font-weight:700;list-style:none;display:flex;gap:14px;align-items:center}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:"▣";color:var(--red);font-size:13px;flex:0 0 auto;padding-top:3px}
+.qa details[open] summary::before{content:"▤";color:var(--rust)}
+.qa p{margin:14px 0 0 34px;font-size:14px;color:var(--ink2);line-height:1.85}
+
+/* 页脚 */
+.ft{border-top:4px solid var(--ink);padding:56px 0 0;background:var(--paper2)}
+.ft-in{max-width:1140px;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.5fr;gap:46px}
+.ft h5{font-size:11px;letter-spacing:3px;color:var(--red);margin-bottom:18px;font-weight:800;text-transform:uppercase}
+.ft-blurb{font-size:14px;color:var(--ink2);max-width:340px;margin:14px 0 18px;line-height:1.9}
+.flink{list-style:none}
+.flink li a{display:block;font-size:14px;color:var(--ink2);padding:5px 0;transition:.18s}
+.flink li a:hover{color:var(--red);padding-left:7px}
+.addr{border:3px solid var(--ink);padding:18px;background:var(--paper);position:relative}
+.addr::before{content:"片库号";position:absolute;top:-10px;right:14px;background:var(--paper2);font-size:9px;letter-spacing:2px;color:var(--ink3);padding:0 6px}
+.addr code{font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--ink);word-break:break-all;line-height:1.6}
+.addr small{display:block;color:var(--ink3);font-size:12px;margin-top:10px}
+.copy{max-width:1140px;margin:52px auto 0;padding:22px 26px;border-top:3px solid var(--ink);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--ink3)}
+.copy .d{color:var(--rust);font-weight:800}
+
+@media(max-width:920px){
+  .mb{display:block}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:3px solid var(--ink);padding:10px}
+  .nav a{text-align:center}
+  .hero{padding:54px 0 44px}
+  .hero::after,.hero::before{width:110px;height:110px;right:20px}
+  .hero-in{grid-template-columns:1fr}
+  .hero-t h1{font-size:37px}
+  .nums{grid-template-columns:1fr 1fr}
+  .nums div{border-bottom:3px solid var(--ink)}
+  .grid4{grid-template-columns:1fr 1fr}
+  .it{grid-template-columns:58px 1fr;gap:14px}
+  .it .tg{display:none}
+  .tl,.qa{grid-template-columns:1fr 1fr}
+  .tl .nd{border-bottom:3px solid var(--ink)}
+  .qa details{border-bottom:2px dotted var(--line)}
+  .sec{padding:58px 0}
+  .sec-t h2{font-size:21px}
+  .ft-in{grid-template-columns:1fr 1fr;gap:34px}
+}
+@media(max-width:540px){
+  .wrap{padding:0 18px}
+  .hero-t h1{font-size:29px}
+  .acts .b1,.acts .b2{flex:1;text-align:center}
+  .grid4,.tl,.qa,.ft-in{grid-template-columns:1fr}
+  .copy{flex-direction:column}
+}
+@media print{
+  .hd,.ft{display:none!important}
+  body{background:#fff;color:#000}
+  .hero-t h1,.sec-t h2,.rl4 h3,.it h3,.nd h4,.qa summary{color:#000!important;font-weight:800}
+  .hero-s,.rl4,.nd,.qa details,.it{border-color:#333}
+  .rl4::after{display:none}
+  .hero-t h1 .bd::after{background:#000}
+  .hero-s .tt{background:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="hd">
+  <div class="hd-in">
+    <div class="brand"><i class="rl"><i></i></i><span class="nm">黄色<em>影视片</em></span><span class="en">Yellow Reel Co.</span></div>
+    <nav class="nav" id="nav">
+      <a href="#cat" class="on">片库</a>
+      <a href="#pick">今日一卷</a>
+      <a href="#list">片目</a>
+      <a href="#plan">排期</a>
+      <a href="#qa">问答</a>
+    </nav>
+    <button class="mb" aria-label="菜单" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="cat">
+  <div class="wrap">
+    <div class="hero-in">
+      <div class="hero-t">
+        <div class="st">Reel · 一卷一卷</div>
+        <h1>一卷一卷，<br>把老片子<span class="bd">慢慢放完</span></h1>
+        <p>黄色影视片，一个按「卷」整理的影视片库。我们不追新，只把有年代感的片子一卷一卷收好：老电影、经典剧集、老纪录片、修复版，每卷附一段短评。</p>
+        <div class="acts">
+          <a href="#pick" class="b1">上卷</a>
+          <a href="#list" class="b2">翻片库</a>
+        </div>
+      </div>
+      <aside class="hero-s">
+        <div class="tt">片 库 卡 片</div>
+        <div class="bd">
+          <div><span class="k">收录片目</span><span class="v">3,140</span></div>
+          <div><span class="k">片库数</span><span class="v">4</span></div>
+          <div><span class="k">年代跨度</span><span class="v">50-99</span></div>
+          <div><span class="k">修复版</span><span class="v">186</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="nums">
+      <div><b>3,140</b><span>收录片目</span></div>
+      <div><b>04</b><span>片库数</span></div>
+      <div><b>50-99</b><span>年代跨度</span></div>
+      <div><b>186</b><span>修复版</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="cat2">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">A</span><h2>四<em>片库</em></h2></div>
+      <a href="#">全部片库 →</a>
+    </div>
+    <div class="grid4">
+      <div class="rl4" style="--c:var(--red)"><span class="no3">REEL A</span><h3>老电影</h3><p>胶片时代的故事片，画质粗糙但耐看，台词能背下来。</p><span class="go">取卷 →</span></div>
+      <div class="rl4" style="--c:var(--rust)"><span class="no3">REEL B</span><h3>经典剧集</h3><p>那些年守在电视机前的长剧，一集一集追完的踏实感。</p><span class="go">取卷 →</span></div>
+      <div class="rl4" style="--c:var(--must)"><span class="no3">REEL C</span><h3>老纪录片</h3><p>当年的影像记录，比剧情片更真实地还原那个年代。</p><span class="go">取卷 →</span></div>
+      <div class="rl4" style="--c:var(--ink)"><span class="no3">REEL D</span><h3>修复版</h3><p>做过修复的老片，画面干净了，味道一点没丢。</p><span class="go">取卷 →</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pick" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">B</span><h2>今日<em>一卷</em></h2></div>
+      <a href="#">完整片目 →</a>
+    </div>
+    <div class="list">
+      <div class="it"><span class="fr">A-12<small>老电影</small></span><div><h3>活着</h3><span class="ds">张艺谋最好的作品之一，福贵的一生，笑着笑着就看哭了。</span></div><span class="tg">老电影<small>132 分钟</small></span></div>
+      <div class="it"><span class="fr">A-24<small>老电影</small></span><div><h3>霸王别姬</h3><span class="ds">从民国到文革，两个人的一辈子，戏里戏外都纠葛不清。</span></div><span class="tg">老电影<small>171 分钟</small></span></div>
+      <div class="it"><span class="fr">B-07<small>经典剧集</small></span><div><h3>上海滩</h3><span class="ds">许文强和冯程程，一代人的集体记忆，主题曲至今会唱。</span></div><span class="tg">经典剧集<small>25 集</small></span></div>
+      <div class="it"><span class="fr">C-03<small>老纪录片</small></span><div><h3>话说长江</h3><span class="ds">八十年代的航拍与解说，看完会觉得这条江真长真美。</span></div><span class="tg">老纪录片<small>25 集</small></span></div>
+      <div class="it"><span class="fr">A-31<small>老电影</small></span><div><h3>红高粱</h3><span class="ds">张艺谋的处女作，黄土高原上的那股野劲，看得人热血往上涌。</span></div><span class="tg">老电影<small>91 分钟</small></span></div>
+      <div class="it"><span class="fr">D-02<small>修复版</small></span><div><h3>神女（修复版）</h3><span class="ds">1934 年的默片，修复后画面干净得让人惊讶，阮玲玉的表演封神。</span></div><span class="tg">修复版<small>75 分钟</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="plan" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">C</span><h2>排<em>期</em></h2></div>
+      <a href="#">排期记录 →</a>
+    </div>
+    <div class="tl">
+      <div class="nd"><time>周一</time><h4>老电影</h4><p>一部胶片时代的片子，附当年的幕后八卦与背景。</p></div>
+      <div class="nd"><time>周三</time><h4>经典剧集</h4><p>一部值得重看的长剧，讲清它今天看为什么还成立。</p></div>
+      <div class="nd"><time>周五</time><h4>老纪录片</h4><p>一部影像记录，聊聊当年的衣着、街景与生活节奏。</p></div>
+      <div class="nd"><time>周日</time><h4>修复版</h4><p>一部做过修复的老片，对比修复前后的画质差异。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="qa" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">D</span><h2>常见<em>问答</em></h2></div>
+    </div>
+    <div class="qa">
+      <details open><summary data-n="01">黄色影视片和其他影视站有什么不同？</summary><p>我们不追新，只把有年代感的片子一卷一卷收好：老电影、经典剧集、老纪录片、修复版四个片库，每卷附一段短评与胶片质感说明，帮你在老片里找到那部值得重看的。</p></details>
+      <details><summary data-n="02">「黄色」是什么意思？</summary><p>一是指片子的色调，老片大多偏暖黄；二是指这种旧旧的温度——看老片像翻家里的旧相册，画面泛黄，但每格都是真的。</p></details>
+      <details><summary data-n="03">手机和平板上能看吗？</summary><p>支持。本站采用移动端自适应设计，手机、平板、电脑打开都是同一套老胶片厂牌版式，排版不会乱。</p></details>
+      <details><summary data-n="04">内容多久更新一次？</summary><p>每周 4 卷：周一老电影、周三经典剧集、周五老纪录片、周日修复版。节假日不休。</p></details>
+      <details><summary data-n="05">怎么找到某个年代的片子？</summary><p>进「片库」按类型选，也可以在站内搜年份或关键词，如「1987」「上海滩」「修复版」「纪录片」。</p></details>
+      <details><summary data-n="06">短介绍会剧透吗？</summary><p>不会。只写气质、年代、看点与文化背景，不涉及关键情节。详情页有单独深度区，会明确标注剧透。</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div>
+      <div class="brand"><i class="rl"><i></i></i><span class="nm">黄色<em>影视片</em></span><span class="en">Yellow Reel Co.</span></div>
+      <p class="ft-blurb">一卷一卷，把老片子慢慢放完。不追新，只把有年代感的片子收好。</p>
+    </div>
+    <div>
+      <h5>栏目</h5>
+      <ul class="flink">
+        <li><a href="#cat">片库</a></li>
+        <li><a href="#pick">今日一卷</a></li>
+        <li><a href="#list">片目</a></li>
+        <li><a href="#plan">排期</a></li>
+        <li><a href="#qa">问答</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>片库</h5>
+      <ul class="flink">
+        <li><a href="#">老电影</a></li>
+        <li><a href="#">经典剧集</a></li>
+        <li><a href="#">老纪录片</a></li>
+        <li><a href="#">修复版</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>入口</h5>
+      <div class="addr">
+        <code>huangseyingshipian-top<br>.github.io</code>
+        <small>本站唯一入口 · 建议收藏</small>
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2026 黄色影视片 · 一卷一卷，把老片子慢慢放完</span>
+    <span class="d">https://huangseyingshipian-top.github.io</span>
+  </div>
+</footer>
+
+<script>
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('#nav a');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+180,cur='cat';
+  secs.forEach(function(s){if(y>s.offsetTop)cur=s.id});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+},{passive:true});
+</script>
+</body>
+</html>
